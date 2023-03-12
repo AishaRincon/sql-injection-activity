@@ -1,8 +1,6 @@
-const { query } = require('express');
 const http = require('http'),
-path = require('path'),
-
-express = require('express'),
+path = require('path');
+const express = require('express'),
 bodyParser = require('body-parser');
 const sqlite3 = require('sqlite3').verbose();
 const app = express();
@@ -46,7 +44,5 @@ app.post('/login', function(req,res) {
 
 });
     
+app.listen(3000)
 
-const port = 3000
-
-app.listen(port, () => console.log(` ${port}`));
